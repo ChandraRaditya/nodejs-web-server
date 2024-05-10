@@ -4,7 +4,6 @@ const requestListener = (request, response) => {
   response.setHeader("Content-Type", "application/json");
 
   const { method, url } = request;
-  // untuk mengecek method
   console.log("ini method", method);
 
   if (url === "/") {
