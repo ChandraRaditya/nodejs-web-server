@@ -4,6 +4,7 @@ const requestListener = (request, response) => {
   response.setHeader("Content-Type", "application/json");
 
   const { method, url } = request;
+  // untuk mengecek method
   console.log("ini method", method);
 
   if (url === "/") {
@@ -65,7 +66,7 @@ const requestListener = (request, response) => {
     }
   } else {
     response.statusCode = 404;
-    response.setHeader("Content-Type", "text/html");  // ini percobaan
+    response.setHeader("Content-Type", "text/html"); // ini percobaan
     response.end("<h1>Halaman tidak ditemukan!</h1>");
   }
 };
